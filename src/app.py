@@ -3,6 +3,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 todos = [ { "label": "My first task", "done": False } ]
+
 user = [{ "Name": "Ximena", "edad": 26 },
         { "Name": "Javier", "edad": 32 },
         ]
@@ -33,7 +34,6 @@ def get_user(position2):
         return jsonify(get_user_from_list)
     else:
         return jsonify({"error": "usuario no encontrado"}), 404
-
 
 
 
